@@ -4,11 +4,11 @@
  * @problem.severity warning
  * @id cpp/example/empty-block
  */
-predicate plusOne(int x, int y) {
-  y in [2 .. 10] and
-  x = y + 1
-}
+
+import cpp
+
+int emptySet() { none() }
 
 from int x, int y
-where y = 10 and plusOne(x, y)
+where y = 10 and x = emptySet()
 select x, y
